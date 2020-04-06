@@ -1,0 +1,12 @@
+<strong>Olá {{ deliveryman.name }},</strong> <br />
+<p>Temos uma nova entrega para você e o produto {{ product }} já está disponível para retirada </p>
+
+<h3> Dados do destinatário</h3>
+<strong>Nome: </strong> {{ recipient.name }} <br />
+<strong>Endereço: </strong> {{ recipient.street }}, {{ recipient.number }}{{#if recipient.additional_address_data}},
+{{ recipient.additional_address_data }} {{/if}} <br />
+<strong>Cidade: </strong> {{ recipient.city }} <br />
+<strong>Estado: </strong> {{ recipient.state }} <br />
+<strong>CEP: </strong> {{ recipient.zipcode }} <br />
+
+<p>O produto estará disponível para retirada nos horários entre 08:00 e 18:00h</p>
