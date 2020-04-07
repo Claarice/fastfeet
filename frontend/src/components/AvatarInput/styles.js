@@ -11,21 +11,36 @@ export const Container = styled.div`
       opacity: 0.7;
     }
 
-    span {
-      font-size: 16px;
-      font-weight: 700;
-    }
-
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 1px dashed #dddddd;
-      background: #ffffff;
-    }
-
     input {
       display: none;
     }
+  }
+`;
+
+export const PhotoPlaceHolder = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px dashed #dddddd;
+  background: #ffffff;
+
+  justify-content: center;
+
+  span {
+    color: #dddddd;
+  }
+`;
+
+export const PhotoInput = styled.div`
+  display: none;
+  img {
+    width: 150px;
+    height: 150px;
+    border: 3px dashed #dddddd;
+    border-radius: 50%;
+    background: #ffffff;
   }
 `;

@@ -10,12 +10,10 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 
-* { border: 1px solid transparent; }
-
 *: focus {
   outline: 0;
 }
-
+  
 html, body, #root {
   height: 100%;
   min-height: 100%;
