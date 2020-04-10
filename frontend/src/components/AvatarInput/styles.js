@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { darken } from 'polished';
+import CircledAvatar from '~/components/CircledAvatar';
+
 export const Container = styled.div`
   align-self: center;
   margin-bottom: 30px;
@@ -18,7 +21,7 @@ export const Container = styled.div`
 `;
 
 export const PhotoPlaceHolder = styled.div`
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   width: 150px;
@@ -35,7 +38,7 @@ export const PhotoPlaceHolder = styled.div`
 `;
 
 export const PhotoInput = styled.div`
-  display: none;
+  display: flex;
   img {
     width: 150px;
     height: 150px;
@@ -43,4 +46,17 @@ export const PhotoInput = styled.div`
     border-radius: 50%;
     background: #ffffff;
   }
+`;
+
+export const NoAvatarFound = styled(CircledAvatar)`
+  width: 150px !important;
+  height: 150px !important;
+  border: 3px dashed ${props => darken(0.1, props.avatarColor.toString())};
+  border-radius: 50%;
+  background: ${props => props.avatarColor};
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  padding: 25px;
+  color: ${props => darken(0.3, props.avatarColor.toString())};
 `;

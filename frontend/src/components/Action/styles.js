@@ -9,13 +9,14 @@ export const ActionBox = styled.div`
   display: ${props => (props.visible ? 'flex' : 'none !important')};
   flex-direction: column;
   width: 150px;
-  left: calc(50% - 72px);
-  top: calc(100% - 1px);
+  left: calc(50% - 84px);
+  top: calc(100% + 30px);
   background: #ffffff;
   padding: 5px 0;
   box-shadow: 0px 0px 2px #00000026;
   margin: 10px;
   border-radius: 4px !important;
+  text-align: left;
 
   hr {
     color: #ffffff;
@@ -48,4 +49,14 @@ export const EditAction = styled.div`
     margin-left: 3px;
     padding: 4px;
   }
+`;
+
+export const OpenModal = styled.button`
+  border: 0;
+  background: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #999999;
+  margin-left: 3px;
+  padding: 4px;
 `;

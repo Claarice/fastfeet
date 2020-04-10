@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const NewRecordPage = styled.div`
-  height: 500px;
-  max-height: 800px;
-  margin: 20px 200px;
+  height: !00% !important;
+  margin: 0 19%;
+  margin-bottom: 0 !important;
+  padding-bottom: 100px;
 `;
 
 export const NewRecordHeader = styled.div`
@@ -49,7 +50,7 @@ export const InputGroup = styled.div`
   max-height: 600px;
   background-color: #fff;
   border-radius: 4px;
-  padding: 10px 30px;
+  padding: 30px;
 
   span {
     font-weight: 700;

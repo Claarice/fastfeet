@@ -16,7 +16,6 @@ export default createGlobalStyle`
   
 html, body, #root {
   height: 100%;
-  min-height: 100%;
 }
 
 body {
@@ -39,5 +38,11 @@ ul {
 button {
   cursor: pointer;
 }
+
+#modal {
+  position: relative;
+  z-index: 999;
+}
+
 
 `;
