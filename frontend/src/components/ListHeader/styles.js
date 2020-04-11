@@ -52,11 +52,6 @@ export const TableHeader = styled.div`
   flex-direction: row;
   justify-content: center;
   margin: 5px 80px;
-
-  div:last-child {
-    display: flex;
-    justify-content: flex-end;
-  }
 `;
 
 export const CellHeader = styled.div`

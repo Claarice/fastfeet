@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom';
 
@@ -24,7 +25,10 @@ import {
 import ViewRecord from '~/components/ViewRecord';
 import CircledAvatar from '~/components/CircledAvatar';
 
-export default function ListItem() {
+export default function ListItem(props) {
+  const { order } = props;
+  console.log(props);
+  const data = new Array(order);
   const [visible, setVisible] = useState(false);
   const [show, setShow] = useState(false);
 
@@ -44,16 +48,20 @@ export default function ListItem() {
     <>
       <Container>
         <TableRow>
+          $
+          {data.map(item => (
+            <TableCell>{item}</TableCell>
+          ))}
           <TableCell>Order</TableCell>
-          <TableCell>
+          <TableCell display="none">
             <CircledAvatar /> Order
           </TableCell>
-          <TableCell>
+          <TableCell display="none">
             <StatusCell color="#2CA42B">
               <span>&#9679;</span> ENTREGUE
             </StatusCell>
           </TableCell>
-          <TableCell>Lorem ipsum dolor sit amet. </TableCell>
+          <TableCell display="none">Lorem ipsum dolor sit amet. </TableCell>
           <TableCell>
             <ShowActions onClick={handleToggleVisible}>
               <Actions>
@@ -90,3 +98,7 @@ export default function ListItem() {
     </>
   );
 }
+
+ListItem.propTypes = {
+  order: PropTypes.element.isRequired,
+};

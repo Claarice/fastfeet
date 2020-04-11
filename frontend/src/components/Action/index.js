@@ -19,27 +19,29 @@ export default function Action(props) {
     setShow(!show);
   }
 
-  console.log(show);
-
   return (
     <>
       <Container>
         <ActionBox visible={visible}>
           <EditAction>
-            <OpenModal onClick={() => showModal}>
+            <OpenModal onClick={showModal}>
               <MdVisibility size={20} color="#8E5BE8" />
-              Visualizar
+              <span>Visualizar</span>
             </OpenModal>
           </EditAction>
           <hr />
           <EditAction>
-            <MdCreate size={20} color="#4D85EE" />
-            <Link to="/edit">Editar</Link>
+            <Link to="/edit">
+              <MdCreate size={20} color="#4D85EE" />
+              <span>Editar</span>
+            </Link>
           </EditAction>
           <hr />
           <EditAction>
-            <MdDeleteForever size={20} color="#DE3B3B" />
-            <Link to="/delete">Excluir</Link>
+            <Link to="/delete">
+              <MdDeleteForever size={20} color="#DE3B3B" />
+              <span>Excluir</span>
+            </Link>
           </EditAction>
         </ActionBox>
       </Container>

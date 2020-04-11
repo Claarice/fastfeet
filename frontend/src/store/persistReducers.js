@@ -6,7 +6,7 @@ export default reducers => {
     {
       key: 'fastfeet',
       storage,
-      whiteList: ['show'],
+      whiteList: ['auth'],
     },
     reducers
   );

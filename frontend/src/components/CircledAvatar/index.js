@@ -16,7 +16,7 @@ export default function CircledAvatar(props) {
   }, []);
 
   useEffect(() => {
-    const splitName = 'Clarice Ribeiro'.split(' ');
+    const splitName = children.split(' ');
 
     if (splitName.length === 1) {
       setInitials(splitName[0].substring(0, 2).toUpperCase());
@@ -30,7 +30,7 @@ export default function CircledAvatar(props) {
 
   return (
     <Avatar avatarColor={avatarColor} className={className}>
-      {children} {initials}
+      {initials}
     </Avatar>
   );
 }

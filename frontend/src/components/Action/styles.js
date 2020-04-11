@@ -9,8 +9,8 @@ export const ActionBox = styled.div`
   display: ${props => (props.visible ? 'flex' : 'none !important')};
   flex-direction: column;
   width: 150px;
-  left: calc(50% - 84px);
-  top: calc(100% + 30px);
+  left: calc(100% - 97px);
+  top: calc(100% + 10px);
   background: #ffffff;
   padding: 5px 0;
   box-shadow: 0px 0px 2px #00000026;

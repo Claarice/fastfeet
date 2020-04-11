@@ -37,16 +37,16 @@ routes.put('/deliverymen/:id', DeliveryManController.update);
 routes.get('/deliverymen', DeliveryManController.index);
 routes.delete('/deliverymen/:id', DeliveryManController.delete);
 
-routes.post('/order', OrderController.store);
-routes.get('/order', OrderController.index);
-routes.put('/order/:id', OrderController.update);
-routes.delete('/order/:id', OrderController.delete);
+routes.post('/orders', OrderController.store);
+routes.get('/orders', OrderController.index);
+routes.put('/orders/:id', OrderController.update);
+routes.delete('/orders/:id', OrderController.delete);
 
 routes.get('/deliveryman/:deliveryManId/deliveries', DeliveryController.index);
 
-routes.put('/order/:orderId/start', StartController.update);
+routes.put('/orders/:orderId/start', StartController.update);
 
-routes.put('/order/:orderId/end', EndController.update);
+routes.put('/orders/:orderId/end', EndController.update);
 
 routes.delete(
   '/problem/:problemId/cancel-delivery',

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { useHistory } from 'react-router-dom';
 
@@ -10,11 +11,12 @@ import {
   SearchBox,
   ListButton,
   TableHeader,
-  CellHeader,
   Title,
 } from './styles';
 
-export default function ListHeader() {
+import CellHeader from '~/components/CellHeader';
+
+export default function ListHeader({ children }) {
   const history = useHistory();
 
   return (
@@ -35,13 +37,11 @@ export default function ListHeader() {
         </ListButton>
       </PageTop>
 
-      <TableHeader>
-        <CellHeader>Título</CellHeader>
-        <CellHeader>Título</CellHeader>
-        <CellHeader>Título</CellHeader>
-        <CellHeader>Título</CellHeader>
-        <CellHeader>Ações</CellHeader>
-      </TableHeader>
+      <TableHeader>{children}</TableHeader>
     </Container>
   );
 }
+
+ListHeader.propTypes = {
+  children: PropTypes.element.isRequired,
+};
