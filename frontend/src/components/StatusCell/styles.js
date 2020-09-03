@@ -3,12 +3,10 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 
 export const Status = styled.span`
-  display: flex;
-  justify-content: center;
   text-align: center;
-  color: #2ca42b !important;
+  color: ${props => `${props.color} !important`};
   font-weight: 700;
-  background: ${lighten(0.5, '#2ca42b')};
+  background: ${props => props.color && lighten(0.4, props.color)};
   border-radius: 12px;
   padding: 7px 7px;
   height: 30px;

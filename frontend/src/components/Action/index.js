@@ -19,6 +19,10 @@ export default function Action(props) {
     setShow(!show);
   }
 
+  function handleCloseModal() {
+    setShow(false);
+  }
+
   return (
     <>
       <Container>
@@ -45,7 +49,7 @@ export default function Action(props) {
           </EditAction>
         </ActionBox>
       </Container>
-      <ViewRecord show={show} />
+      <ViewRecord show={show} onShowChange={handleCloseModal} />
     </>
   );
 }

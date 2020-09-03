@@ -26,7 +26,7 @@ export default function CircledAvatar(props) {
           splitName[splitName.length - 1].substring(0, 1).toUpperCase()
       );
     }
-  }, []);
+  }, [children]);
 
   return (
     <Avatar avatarColor={avatarColor} className={className}>

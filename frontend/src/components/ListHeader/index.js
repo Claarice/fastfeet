@@ -18,6 +18,7 @@ import CellHeader from '~/components/CellHeader';
 
 export default function ListHeader({ children }) {
   const history = useHistory();
+  const [searchTerm, setSearchTerm] = useState('');
 
   return (
     <Container>

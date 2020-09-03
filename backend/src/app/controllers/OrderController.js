@@ -135,7 +135,14 @@ class OrderController {
           { product: { [Op.like]: `%${q || ''}%` } },
         ],
       },
-      attributes: ['id', 'product', 'canceled_at', 'start_date', 'end_date'],
+      attributes: [
+        'id',
+        'product',
+        'canceled_at',
+        'status',
+        'start_date',
+        'end_date',
+      ],
       limit: 20,
       offset: (page - 1) * 20,
       include: [

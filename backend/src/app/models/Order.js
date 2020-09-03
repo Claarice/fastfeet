@@ -9,6 +9,24 @@ class Order extends Model {
         canceled: Sequelize.BOOLEAN,
         start_date: Sequelize.DATE,
         end_date: Sequelize.DATE,
+        status: {
+          type: Sequelize.VIRTUAL,
+          get() {
+            if (this.canceled === true) {
+              return 'CANCELADA';
+            }
+            if (this.start_date === null) {
+              return 'PENDENTE';
+            }
+            if (this.end_date === null && this.start_date !== null) {
+              return 'RETIRADA';
+            }
+            if (this.end_date !== null && this.start_date !== null) {
+              return 'ENTREGUE';
+            }
+            return '';
+          },
+        },
       },
       {
         sequelize,
